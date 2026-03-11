@@ -1,9 +1,11 @@
 import { Button, Container, TextField } from "@mui/material";
 import { useContext, useState } from "react";
 import { GoalContext } from "../context/GoalContext";
+import { useLanguage } from "../LTR/LanguageContext";
 
 export default function NewGoal() {
   const { createGoal } = useContext(GoalContext);
+  const { language } = useLanguage();
 
   const [title, setTitle] = useState("");
   const [target, setTarget] = useState("");

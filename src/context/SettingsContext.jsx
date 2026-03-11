@@ -20,6 +20,7 @@ export const SettingsProvider = ({ children }) => {
       value={{
         mode,
         language,
+        setLanguage,
         toggleTheme,
         toggleLanguage,
       }}

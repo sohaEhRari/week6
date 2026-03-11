@@ -9,7 +9,7 @@ import NewGoal from "./pages/NewGoal";
 import Settings from "./pages/Settings";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import { getTheme } from "./Theme/theme" // your function that accepts mode & language
-import { useContext } from "react";
+import { useContext, useEffect, useMemo } from "react";
 import { SettingsContext } from "./context/SettingsContext";
 import createCache from "@emotion/cache";
 import { CacheProvider } from "@emotion/react";
@@ -18,16 +18,26 @@ import { prefixer } from "stylis";
 
 
 function App() {
-const rtlCache= createCache({
-  key:"muirtl",
-  stylisPlugins:[prefixer,rtlPlugin],
-})
+  const rtlCache = useMemo(
+    () =>
+      createCache({
+        key: "muirtl",
+        stylisPlugins: [prefixer, rtlPlugin],
+      }),
+    []
+  );
+  const ltrCache = useMemo(() => createCache({ key: "muiltr" }), []);
 
   const { mode, language } = useContext(SettingsContext);
   const theme = getTheme(mode, language);
+  useEffect(() => {
+    const dir = language === "fa" ? "rtl" : "ltr";
+    document.documentElement.setAttribute("dir", dir);
+    document.documentElement.setAttribute("lang", language);
+  }, [language]);
   return (
     <>
-    <CacheProvider value={rtlCache}>
+    <CacheProvider value={language === "fa" ? rtlCache : ltrCache}>
     <ThemeProvider theme={theme}>
       <CssBaseline />
 

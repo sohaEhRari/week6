@@ -77,8 +77,7 @@ Example:
 
 #screen-shots 
 
-![English](./src/assets/English.png)
-![Farsi](./src/assets/Farsi.png)
+<img src="../src/assets/English.png" width="700"/>)
 
 
 

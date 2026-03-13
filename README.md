@@ -77,8 +77,8 @@ Example:
 
 #screen-shots 
 
-(./src/assets/English.png)
-(./src/assets/Farsi.png)
+![English](./src/assets/English.png)
+![Farsi](./src/assets/Farsi.png)
 
 
 

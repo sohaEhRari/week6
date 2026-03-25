@@ -77,8 +77,9 @@ Example:
 
 #screen-shots 
 
-<img src="../src/assets/English.png" width="700"/>)
-
+<p align="center">
+  <img src="../src/assets/English.png" width="600"/>
+</p>
 
 
 ## 🌐 RTL / LTR Language Support

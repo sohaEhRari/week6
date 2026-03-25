@@ -75,10 +75,9 @@ Example:
 
 
 
-#screen-shots 
 
 <p align="center">
-  <img src="./src/assets/English.png" width="600"/>
+  <img src="./screenshots/English.png" width="600"/>
 </p>
 
 

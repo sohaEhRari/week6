@@ -80,6 +80,10 @@ Example:
   <img src="./screenshots/English.png" width="600"/>
 </p>
 
+<p align="center">
+  <img src="./screenshots/Farsi.png" width="600"/>
+</p>
+
 
 ## 🌐 RTL / LTR Language Support
 
